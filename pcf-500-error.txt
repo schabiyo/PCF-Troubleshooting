@@ -1,0 +1,8 @@
+Error:  500 Internal Server Error nginx 
+
+
+The problem was that I had run out of space in the Director VM's persistent disk. 
+
+Detect: I was able to see this by SSH'ing into the director VM, and running "df -h" to see the space utilization.
+
+Resolution: Go to Ops Manager, and set the persistent disk for the director VM to 40G, and then started the deploy again
